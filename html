@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Simulador Agrícola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0f7fa;
+        }
+        h1 {
+            color: #00695c;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador Agrícola</h1>
+    <div class="container">
+        <label for="cultiva">Escolha a cultura:</label>
+        <select id="cultiva">
+            <option value="milho">Milho</option>
+            <option value="soja">Soja</option>
+            <option value="arroz">Arroz</option>
+        </select>
+
+        <label for="fertilizante">Escolha o fertilizante:</label>
+        <select id="fertilizante">
+            <option value="baixo">Baixo custo</option>
+            <option value="medio">Médio custo</option>
+            <option value="alto">Alto custo</option>
+        </select>
+
+        <label for="maquina">Tipo de máquina:</label>
+        <select id="maquina">
+            <option value="simples">Simples</option>
+            <option value="avancada">Avançada</option>
+        </select>
+
+        <button onclick="calcular()">Simular</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            const cultura = document.getElementById('cultiva').value;
+            const fertilizante = document.getElementById('fertilizante').value;
+            const maquina = document.getElementById('maquina').value;
+
+            let produtividade = 0;
+            let custo = 0;
+
+            // Definindo valores baseados nas escolhas
+            if (cultura === 'milho') {
+                produtividade += 100;
+            } else if (cultura === 'soja') {
+                produtividade += 80;
+            } else if (cultura === 'arroz') {
+                produtividade += 90;
+            }
+
+            if (fertilizante === 'baixo') {
+                custo += 20;
+                produtividade += 10;
+            } else if (fertilizante === 'medio') {
+                custo += 50;
+                produtividade += 20;
+            } else if (fertilizante === 'alto') {
+                custo += 100;
+                produtividade += 30;
