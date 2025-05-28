@@ -3,32 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Simulador agrícola interativo com estações, clima, animais e plantações.">
   <title>Simulador Agrícola</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>🌾 Simulador Agrícola</h1>
-    <div id="info">
-      <p><strong>Dia:</strong> <span id="dia">1</span> | <strong>Estação:</strong> <span id="estacao">Primavera</span> | <strong>Clima:</strong> <span id="clima">Sol</span> | <strong>Dinheiro:</strong> $<span id="dinheiro">100</span></p>
-    </div>
-    
-    <div class="acoes">
-      <button onclick="plantar()">Plantar</button>
-      <button onclick="regar()">Regar</button>
-      <button onclick="fertilizar()">Fertilizar</button>
-      <button onclick="colher()">Colher</button>
-      <button onclick="comprarAnimal()">Comprar Vaca ($50)</button>
-      <button onclick="proximoDia()">Próximo Dia</button>
-    </div>
+  </header>
 
-    <div id="status">
+  <main class="container">
+    <!-- Informações gerais -->
+    <section id="info" aria-label="Informações do jogo">
+      <p>
+        <strong>Dia:</strong> <span id="dia">1</span> |
+        <strong>Estação:</strong> <span id="estacao">Primavera</span> |
+        <strong>Clima:</strong> <span id="clima">Sol</span> |
+        <strong>Dinheiro:</strong> $<span id="dinheiro">100</span>
+      </p>
+    </section>
+
+    <!-- Ações disponíveis -->
+    <section class="acoes" aria-label="Ações do jogador">
+      <h2>Ações</h2>
+      <button onclick="plantar()">🌱 Plantar</button>
+      <button onclick="regar()">💧 Regar</button>
+      <button onclick="fertilizar()">🌿 Fertilizar</button>
+      <button onclick="colher()">🌾 Colher</button>
+      <button onclick="comprarAnimal()">🐄 Comprar Vaca ($50)</button>
+      <button onclick="proximoDia()">⏭️ Próximo Dia</button>
+    </section>
+
+    <!-- Status da fazenda -->
+    <section id="status" aria-label="Status da fazenda">
       <h2>Status</h2>
-      <p><strong>Plantas:</strong> <span id="plantas">0</span></p>
-      <p><strong>Estoque:</strong> <span id="estoque">0</span></p>
-      <p><strong>Animais:</strong> <span id="animais">0</span></p>
-    </div>
-  </div>
+      <ul>
+        <li><strong>Plantas:</strong> <span id="plantas">0</span></li>
+        <li><strong>Estoque:</strong> <span id="estoque">0</span></li>
+        <li><strong>Animais:</strong> <span id="animais">0</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Simulador Agrícola</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
