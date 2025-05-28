@@ -93,3 +93,27 @@ function proximoDia() {
 
   atualizarInterface();
 }
+// Inicia o jogo com orçamento escolhido
+function iniciarJogo() {
+  const valor = parseInt(document.getElementById("orcamentoInicial").value);
+  if (isNaN(valor) || valor < 10) {
+    alert("💬 Por favor, digite um valor válido (mínimo 10).");
+    return;
+  }
+
+  dinheiro = valor;
+  atualizarInterface();
+
+  // Esconde os controles de configuração
+  document.querySelector(".config-inicial").style.display = "none";
+}
+function ativarTelaCheia() {
+  const body = document.documentElement;
+  if (body.requestFullscreen) {
+    body.requestFullscreen();
+  } else if (body.webkitRequestFullscreen) {
+    body.webkitRequestFullscreen();
+  } else if (body.msRequestFullscreen) {
+    body.msRequestFullscreen();
+  }
+}
