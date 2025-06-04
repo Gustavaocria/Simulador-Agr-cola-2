@@ -117,3 +117,35 @@ function ativarTelaCheia() {
     body.msRequestFullscreen();
   }
 }
+let cropsStored = 0;
+let climateCondition = 'normal';
+
+// Função para iniciar a simulação
+function startSimulation() {
+    // Modifica o clima aleatoriamente
+    const climates = ['normal', 'chuva', 'seca'];
+    climateCondition = climates[Math.floor(Math.random() * climates.length)];
+    console.log(`Clima atual: ${climateCondition}`);
+
+    // Simula o crescimento e colheita
+    if (climateCondition === 'normal') {
+        cropsStored += 10; // Colheita normal
+    } else if (climateCondition === 'chuva') {
+        cropsStored += 5; // Menos colheita com chuva
+    } else {
+        cropsStored += 15; // Colheita abundante na seca
+    }
+
+    // Atualiza as informações no HTML
+    updateHarvestInfo();
+}
+
+// Função para atualizar o estoque de colheitas
+function updateHarvestInfo() {
+    const harvestInfo = document.getElementById('harvest-info');
+    harvestInfo.textContent = `Estoque atual de colheitas: ${cropsStored} unidades.`;
+}
+
+// Evento do botão de simulação
+const startButton = document.getElementById('start-simulation');
+startButton.addEventListener('click', startSimulation);
