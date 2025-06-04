@@ -75,3 +75,83 @@ input[type="number"] {
   border: 1px solid #ccc;
   width: 100px;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Seção do controle de fazenda */
+.farm-controls {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.farm-controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.farm-controls button:hover {
+    background-color: #45a049;
+}
+
+/* Seção de informações */
+.farm-info {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.farm-info h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.farm-info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 1rem;
+}
