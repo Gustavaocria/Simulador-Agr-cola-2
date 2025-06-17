@@ -60,4 +60,4 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](
 
 ---
 
-Feito com ❤️ por [Seu Nome ou Sua Equipe]
+Feito com ❤️ por [gustavo quirino.]
